@@ -1,6 +1,7 @@
 import logging
 import os
 from aiogram import Bot, Dispatcher, types, F
+from aiogram.filters.command import Command
 from aiogram.types import KeyboardButton, ReplyKeyboardMarkup, ReplyKeyboardRemove
 from aiogram.utils.keyboard import InlineKeyboardBuilder
 from aiogram.fsm.state import StatesGroup, State
@@ -22,7 +23,7 @@ class OrderStates(StatesGroup):
     waiting_for_location = State()
     waiting_for_contact = State()
 
-@dp.message(commands=["start"])
+@dp.message(Command("start"))
 async def cmd_start(message: types.Message, state: FSMContext):
     text = (
         "🚖 ШЫМБАЙ-НУКУС ТАКСИ 🚖\n\n"
