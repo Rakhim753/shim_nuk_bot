@@ -1,7 +1,6 @@
 import logging
 import os
 from aiogram import Bot, Dispatcher, types, F
-from aiogram.filters import Text
 from aiogram.types import KeyboardButton, ReplyKeyboardMarkup, ReplyKeyboardRemove
 from aiogram.utils.keyboard import InlineKeyboardBuilder
 from aiogram.fsm.state import StatesGroup, State
